@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Claude 4.7 App</title>
+    <!-- Import Puter.js -->
+    <script src="https://js.puter.com/v2/"></script>
+</head>
+<body>
+    <h1>Ask Claude Opus 4.7</h1>
+    <div id="response">Waiting for Claude...</div>
+
+    <script>
+        // Call the latest model
+        puter.ai.chat("What are the top 3 features of Claude Opus 4.7?", { model: 'claude-opus-4-7' })
+            .then(function(response) {
+                // Display the answer on the page
+                document.getElementById('response').innerText = response.message.content[0].text;
+            });
+    </script>
+</body>
+</html>
